@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.yaro.babigdk.inecfika.MainFrame"
+    android:background="@drawable/apture">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        android:background="@drawable/apture">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linear"
+
+            android:weightSum="1"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin">
+
+            <ImageView
+                android:layout_width="match_parent"
+                app:srcCompat="@drawable/apture"
+                android:id="@+id/imageView"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:text="INEC FIKA Result Sheet Calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView11"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Large"
+                android:textSize="18sp"
+                android:textColor="#134409"
+                android:textStyle="bold"
+                android:background="@android:color/background_light"
+                android:textAlignment="center"
+                android:layout_marginRight="@dimen/activity_vertical_margin" />
+
+            <TextView
+                android:text="Number of Voters on the Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+
+                android:textColor="#295616"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingRight="@dimen/activity_vertical_margin"
+
+                android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/voters_register"
+                android:hint="@string/voters_register"
+                android:textColorHint="#286006"
+                android:textColorLink="#39c7fc"
+                android:layout_marginLeft="@android:dimen/notification_large_icon_width"
+                android:layout_marginRight="@android:dimen/notification_large_icon_width"
+                android:background="@android:color/background_light"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Number of Accredited Voters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:textColor="#295616"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/accrd"
+                android:hint="@string/accredited_voters"
+                android:textColorHint="#286006"
+                android:textColorLink="#39c7fc"
+                android:layout_below="@+id/voters_register"
+                android:textAlignment="center"
+                android:layout_marginLeft="@android:dimen/notification_large_icon_width"
+                android:layout_marginRight="@android:dimen/notification_large_icon_width"
+                android:background="@android:color/background_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Number of Ballot Papers Issued to the PU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:textColor="#295616"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:hint="@string/issued_ballot_papers"
+                android:textColorLink="#39c7fc"
+                android:textColorHint="#286006"
+                android:layout_below="@+id/accrd"
+                android:textAlignment="center"
+                android:id="@+id/issued_paper"
+                android:layout_marginRight="@android:dimen/notification_large_icon_width"
+                android:layout_marginLeft="@android:dimen/notification_large_icon_width"
+                android:background="@android:color/background_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Number of Unused Ballot Papers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.TextView.SpinnerItem"
+                android:textColor="#295616"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:hint="@string/unused_ballot_papers"
+                android:textColorHint="#286006"
+                android:layout_below="@+id/editText3"
+                android:textAlignment="center"
+                android:id="@+id/unused_paper"
+                android:layout_marginLeft="@android:dimen/notification_large_icon_width"
+                android:layout_marginRight="@android:dimen/notification_large_icon_width"
+                android:background="@android:color/background_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Number of Spoiled Ballot Papers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:textColor="#295616"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:hint="@string/spoiled_ballot_papers"
+                android:textColorHint="#286006"
+                android:layout_below="@+id/editText4"
+                android:textAlignment="center"
+                android:id="@+id/spoiled_paper"
+                android:layout_marginLeft="@android:dimen/notification_large_icon_width"
+                android:layout_marginRight="@android:dimen/notification_large_icon_width"
+                android:background="@android:color/background_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Number of Rejected Ballots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:textColor="#295616"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:hint="@string/rejected_ballot_papers"
+                android:textColorHint="#286006"
+                android:layout_below="@+id/editText5"
+                android:textAlignment="center"
+                android:id="@+id/rej_paper"
+                android:layout_marginLeft="@android:dimen/notification_large_icon_width"
+                android:layout_marginRight="@android:dimen/notification_large_icon_width"
+                android:background="@android:color/background_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Number of Total Valid Vote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:textColor="#295616"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="0"
+                android:ems="10"
+                android:hint="@string/total_valid_vote"
+                android:enabled="false"
+                android:textColorHint="#286006"
+                android:layout_below="@+id/editText6"
+                android:textAlignment="center"
+                android:id="@+id/valid_vote"
+                android:layout_marginLeft="@android:dimen/notification_large_icon_width"
+                android:layout_marginRight="@android:dimen/notification_large_icon_width"
+                android:background="@android:color/background_light"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:text="Total Number of Used Ballot Papers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:textColor="#295616"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="0"
+
+                android:enabled="false"
+                android:ems="10"
+                android:hint="@string/used_ballot_papers"
+                android:textColorHint="#286006"
+                android:layout_below="@+id/editText7"
+                android:textAlignment="center"
+                android:id="@+id/used_paper"
+                android:layout_marginLeft="@android:dimen/notification_large_icon_width"
+                android:layout_marginRight="@android:dimen/notification_large_icon_width"
+                android:background="@android:color/background_light"
+                android:textSize="14sp"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                android:textColor="#163b0b" />
+
+            <TextView
+                android:text=" "
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/useaANDunused"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:textColor="#295616"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:text="@string/result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/result"
+                android:layout_below="@+id/editText9"
+                android:layout_alignRight="@+id/editText9"
+                android:background="@android:color/holo_blue_dark"
+                android:textColor="@android:color/background_light"
+
+                android:textStyle="bold"
+                android:onClick="onClick (MainFrame)"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <Button
+                android:text="@string/reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reset"
+                android:background="@color/colorAccent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/background_light"
+
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+
+                android:layout_marginTop="12dp"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:onClick="onReset"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
